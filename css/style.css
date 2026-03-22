@@ -405,29 +405,17 @@ textarea {
 
 /* Blocks */
 /* ------------------------------------ */
-.link-back {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 300;
-}
-.link-back__text {
-  color: #8B8B8B;
-}
-
 .header {
   padding: 32px 0;
 }
 @media (max-width: 1023px) {
   .header {
-    padding: 22px 0;
+    padding: 17px 0;
   }
 }
 @media (max-width: 767px) {
   .header {
-    padding: 30px 0;
+    padding: 25px 0;
   }
 }
 .header__wrapper {
@@ -506,10 +494,13 @@ textarea {
   align-items: center;
   justify-content: center;
   position: relative;
+  cursor: pointer;
 }
 @media (max-width: 1023px) {
   .burger {
     display: flex;
+    box-sizing: content-box;
+    padding: 5px;
   }
 }
 
@@ -948,7 +939,7 @@ textarea {
   font-size: 16px;
   font-weight: 300;
   line-height: 26px;
-  margin: 0 0 40px 0;
+  margin: 0 0 8px 0;
   padding: 29px 0 0 0;
   text-transform: uppercase;
 }
@@ -956,7 +947,6 @@ textarea {
   .article-aside__title {
     padding: 0;
     border: none;
-    margin: 0;
   }
 }
 @media (max-width: 1023px) {
@@ -980,24 +970,33 @@ textarea {
 }
 .article-aside__item {
   counter-increment: aside-list 1;
-  padding: 0 0 0 32px;
+  padding: 0;
   position: relative;
-}
-.article-aside__item::before {
-  color: #737373;
-  content: counter(aside-list) ".";
-  font-size: 13px;
-  left: 0;
-  line-height: 16px;
-  position: absolute;
-  top: 0;
 }
 .article-aside__link {
   color: #737373;
   display: flex;
   font-size: 13px;
   line-height: 16px;
+  padding: 0 0 0 32px;
+  position: relative;
   transition: color ease-in 0.3s;
+}
+.article-aside__link::before {
+  content: counter(aside-list) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 13px;
+  color: #737373;
+  transition: color ease-in 0.3s;
+}
+.article-aside__link:hover, .article-aside__link:focus-visible {
+  color: #000000;
+  outline: none;
+}
+.article-aside__link:hover::before, .article-aside__link:focus-visible::before {
+  color: #000000;
 }
 @media (max-width: 1023px) {
   .article-aside__inner {
@@ -1055,6 +1054,26 @@ textarea {
 .article-aside__social-link svg {
   height: 24px;
   width: 24px;
+}
+
+.link-back {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 300;
+  outline: none;
+}
+.link-back:focus-visible .link-back__text {
+  color: #1919EF;
+}
+.link-back__text {
+  color: #8B8B8B;
+  transition: color ease-in 0.3s;
+}
+.link-back__text:hover {
+  color: #1919EF;
 }
 
 .see-more {

@@ -21,14 +21,13 @@
     font-size: 16px;
     font-weight: 300;
     line-height: 26px;
-    margin: 0 0 40px 0;
+    margin: 0 0 8px 0;
     padding: 29px 0 0 0;
     text-transform: uppercase;
 
     @include vp-1023 {
       padding: 0;
       border: none;
-      margin: 0;
     }
 
     &--tablet-none {
@@ -54,18 +53,8 @@
 
   &__item {
     counter-increment: aside-list 1;
-    padding: 0 0 0 32px;
+    padding: 0;
     position: relative;
-
-    &::before {
-      color: $color-dim-gray;
-      content: counter(aside-list) ".";
-      font-size: 13px;
-      left: 0;
-      line-height: 16px;
-      position: absolute;
-      top: 0;
-    }
   }
 
   &__link {
@@ -73,7 +62,29 @@
     display: flex;
     font-size: 13px;
     line-height: 16px;
+    padding: 0 0 0 32px;
+    position: relative;
     transition: color $transition-300;
+
+    &::before {
+      content: counter(aside-list) ".";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 13px;
+      color: $color-dim-gray;
+      transition: color $transition-300;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: $color-black;
+      outline: none;
+
+      &::before {
+        color: $color-black;
+      }
+    }
   }
 
   &__inner {
