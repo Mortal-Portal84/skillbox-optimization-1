@@ -8,6 +8,10 @@
   background: $color-white;
   $root: &;
 
+  &:hover &-img {
+    transform: translate(-15px, 15px);
+  }
+
   @include vp-1023 {
     min-height: 320px;
     padding: 28px;
@@ -34,6 +38,7 @@
     width: 228px;
     height: 228px;
     object-fit: contain;
+    transition: transform $transition-300;
 
     @media (max-width: 1299px) {
       right: -30px;
@@ -83,8 +88,10 @@
     justify-content: center;
     padding: 7px 8px;
     color: $color-dim-gray;
+    background-color: $color-white;
     border: 1px solid $color-dim-gray;
     border-radius: 4px;
+    z-index: 10;
 
     @include vp-1023 {
       padding: 6px;
@@ -103,7 +110,7 @@
     font-weight: 300;
     line-height: 20px;
     position: relative;
-    z-index: 1;
+    z-index: 10;
     margin: 0;
     color: $color-black;
 
@@ -118,6 +125,7 @@
     font-weight: 300;
     line-height: 26px;
     margin: 0;
+    z-index: 10;
     color: $color-black;
 
     @include vp-1023 {

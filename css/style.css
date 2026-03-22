@@ -1741,6 +1741,9 @@ textarea {
   border-radius: 20px;
   background: #ffffff;
 }
+.blog-list__card:hover .blog-list__card-img {
+  transform: translate(-15px, 15px);
+}
 @media (max-width: 1023px) {
   .blog-list__card {
     min-height: 320px;
@@ -1769,6 +1772,7 @@ textarea {
   width: 228px;
   height: 228px;
   object-fit: contain;
+  transition: transform ease-in 0.3s;
 }
 @media (max-width: 1299px) {
   .blog-list__card-img {
@@ -1821,8 +1825,10 @@ textarea {
   justify-content: center;
   padding: 7px 8px;
   color: #737373;
+  background-color: #ffffff;
   border: 1px solid #737373;
   border-radius: 4px;
+  z-index: 10;
 }
 @media (max-width: 1023px) {
   .blog-list__card-tag {
@@ -1839,7 +1845,7 @@ textarea {
   font-weight: 300;
   line-height: 20px;
   position: relative;
-  z-index: 1;
+  z-index: 10;
   margin: 0;
   color: #000000;
 }
@@ -1854,6 +1860,7 @@ textarea {
   font-weight: 300;
   line-height: 26px;
   margin: 0;
+  z-index: 10;
   color: #000000;
 }
 @media (max-width: 1023px) {
