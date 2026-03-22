@@ -1,4 +1,4 @@
-.card-info-banner {
+.blog-list__card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@
     }
   }
 
-  &__img {
+  &-img {
     position: absolute;
     z-index: 1;
     top: -80px;
@@ -54,7 +54,7 @@
     }
   }
 
-  &__tags {
+  &-tags {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -74,7 +74,7 @@
     }
   }
 
-  &__tag {
+  &-tag {
     font-size: 13px;
     font-weight: 400;
     line-height: 16px;
@@ -92,13 +92,13 @@
 
   }
 
-  &__content {
+  &-content {
     display: flex;
     flex-direction: column;
     gap: 17px;
   }
 
-  &__date {
+  &-date {
     font-size: 16px;
     font-weight: 300;
     line-height: 20px;
@@ -113,7 +113,7 @@
     }
   }
 
-  &__title {
+  &-title {
     font-size: 20px;
     font-weight: 300;
     line-height: 26px;
@@ -132,7 +132,7 @@
     }
   }
 
-  &__link {
+  &-link {
     position: absolute;
     z-index: 1;
     top: 0;
