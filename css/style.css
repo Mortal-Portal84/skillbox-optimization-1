@@ -509,6 +509,26 @@ textarea {
   }
 }
 
+.link-back {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 300;
+  outline: none;
+}
+.link-back:focus-visible .link-back__text {
+  color: #1919EF;
+}
+.link-back__text {
+  color: #8B8B8B;
+  transition: color ease-in 0.3s;
+}
+.link-back__text:hover {
+  color: #1919EF;
+}
+
 .main-nav {
   margin: 0 20px 0 0;
 }
@@ -1059,26 +1079,6 @@ textarea {
 .article-aside__social-link svg {
   height: 24px;
   width: 24px;
-}
-
-.link-back {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 300;
-  outline: none;
-}
-.link-back:focus-visible .link-back__text {
-  color: #1919EF;
-}
-.link-back__text {
-  color: #8B8B8B;
-  transition: color ease-in 0.3s;
-}
-.link-back__text:hover {
-  color: #1919EF;
 }
 
 .see-more {
