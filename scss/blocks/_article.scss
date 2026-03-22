@@ -1,6 +1,11 @@
 .article {
   margin: 0 0 128px 0;
 
+
+  @media (max-width: 800px) {
+    margin: 0 0 122px 0;
+  }
+
   @include vp-767 {
     margin: 0 0 77px 0;
   }
@@ -25,7 +30,7 @@
   &__img {
     height: 440px;
     width: 820px;
-    margin: 58px 0;
+    margin: 59px 0;
 
     @include vp-1023 {
       width: 100%;
@@ -105,10 +110,15 @@
     font-weight: 500;
     margin: 0;
 
+    @media (max-width: 800px) {
+      padding-top: 10px;
+    }
+
     @include vp-767 {
       font-size: 14px;
       line-height: 20px;
       margin: 16px 0 0 0;
+      padding: 0;
     }
   }
 
