@@ -39,6 +39,7 @@
     height: 228px;
     object-fit: contain;
     transition: transform $transition-300;
+    pointer-events: none;
 
     @media (max-width: 1299px) {
       right: -30px;

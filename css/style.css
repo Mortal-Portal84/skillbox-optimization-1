@@ -1773,6 +1773,7 @@ textarea {
   height: 228px;
   object-fit: contain;
   transition: transform ease-in 0.3s;
+  pointer-events: none;
 }
 @media (max-width: 1299px) {
   .blog-card__img {
