@@ -313,21 +313,21 @@ template {
 
 @font-face {
   font-family: "Unbounded";
-  src: url("../fonts/Unbounded-Light.woff2") format("woff2"), url("../fonts/Unbounded-Light.woff") format("woff");
+  src: url("../../fonts/Unbounded-Light.woff2") format("woff2"), url("../../fonts/Unbounded-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Unbounded";
-  src: url("../fonts/Unbounded-Regular.woff2") format("woff2"), url("../fonts/Unbounded-Regular.woff") format("woff");
+  src: url("../../fonts/Unbounded-Regular.woff2") format("woff2"), url("../../fonts/Unbounded-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Unbounded";
-  src: url("../fonts/Unbounded-Medium.woff2") format("woff2"), url("../fonts/Unbounded-Medium.woff") format("woff");
+  src: url("../../fonts/Unbounded-Medium.woff2") format("woff2"), url("../../fonts/Unbounded-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -415,12 +415,12 @@ textarea {
 }
 @media (max-width: 1023px) {
   .header {
-    padding: 17px 0;
+    padding: 22px 0;
   }
 }
 @media (max-width: 767px) {
   .header {
-    padding: 25px 0;
+    padding: 30px 0;
   }
 }
 .header__wrapper {
@@ -501,11 +501,19 @@ textarea {
   position: relative;
   cursor: pointer;
 }
+.burger::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 42px;
+  height: 42px;
+}
 @media (max-width: 1023px) {
   .burger {
     display: flex;
     box-sizing: content-box;
-    padding: 5px;
   }
 }
 

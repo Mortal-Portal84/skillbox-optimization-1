@@ -10,9 +10,18 @@
   position: relative;
   cursor: pointer;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 42px;
+    height: 42px;
+  }
+
   @include vp-1023 {
     display: flex;
     box-sizing: content-box;
-    padding: 5px;
   }
 }
