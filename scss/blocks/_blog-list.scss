@@ -59,6 +59,10 @@
       margin-top: 58px;
     }
 
+    @include vp-1304 {
+      margin: 41px auto 0;
+    }
+
     &:focus-visible,
     &:hover {
       background-color: $color-blue;

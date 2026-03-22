@@ -16,16 +16,16 @@
   }
 
   &__button {
+    display: flex;
     align-items: center;
+    justify-content: center;
     background-color: transparent;
     border: 1px solid $color-dim-gray;
     border-radius: 4px;
     color: $color-dim-gray;
     cursor: pointer;
-    display: flex;
     font-size: 12px;
     font-weight: 400;
-    justify-content: center;
     line-height: 14px;
     padding: 8px 10px;
     transition: background-color $transition-300,
@@ -44,6 +44,57 @@
     &:hover {
       background-color: $color-dim-gray;
       color: $color-white;
+    }
+  }
+
+  &__checkbox {
+    cursor: pointer;
+    $root: &;
+
+    &-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border: 1px solid $color-dim-gray;
+      border-radius: 4px;
+      padding: 6px;
+      transition: color $transition-300,
+      border-color $transition-300,
+      background-color $transition-300;
+
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+      color: $color-dim-gray;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-white-smoke;
+        border-color: $color-dim-gray;
+        background-color: $color-dim-gray;
+      }
+    }
+
+    &-input:checked + &-label,
+    &-input:checked:focus-visible + &-label
+    {
+      color: $color-blue;
+      border-color: $color-blue;
+      background-color: transparent;
+      outline: unset;
+    }
+
+    &-input:focus-visible + &-label {
+      color: $color-white-smoke;
+      border-color: $color-dim-gray;
+      background-color: $color-dim-gray;
+    }
+
+    &--active &-label {
+      color: $color-blue;
+      border-color: $color-blue;
+      background-color: transparent;
     }
   }
 }

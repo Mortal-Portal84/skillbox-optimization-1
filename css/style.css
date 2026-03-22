@@ -408,6 +408,11 @@ textarea {
 .header {
   padding: 32px 0;
 }
+@media (min-width: 1304px) {
+  .header {
+    padding: 30px 0;
+  }
+}
 @media (max-width: 1023px) {
   .header {
     padding: 17px 0;
@@ -1438,16 +1443,16 @@ textarea {
   }
 }
 .blog-filter__button {
+  display: flex;
   align-items: center;
+  justify-content: center;
   background-color: transparent;
   border: 1px solid #737373;
   border-radius: 4px;
   color: #737373;
   cursor: pointer;
-  display: flex;
   font-size: 12px;
   font-weight: 400;
-  justify-content: center;
   line-height: 14px;
   padding: 8px 10px;
   transition: background-color ease-in 0.3s, color ease-in 0.3s, border-color ease-in 0.3s;
@@ -1464,6 +1469,45 @@ textarea {
 .blog-filter__button:hover {
   background-color: #737373;
   color: #ffffff;
+}
+.blog-filter__checkbox {
+  cursor: pointer;
+}
+.blog-filter__checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid #737373;
+  border-radius: 4px;
+  padding: 6px;
+  transition: color ease-in 0.3s, border-color ease-in 0.3s, background-color ease-in 0.3s;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #737373;
+  cursor: pointer;
+}
+.blog-filter__checkbox-label:hover {
+  color: #F2F2F2;
+  border-color: #737373;
+  background-color: #737373;
+}
+.blog-filter__checkbox-input:checked + .blog-filter__checkbox-label, .blog-filter__checkbox-input:checked:focus-visible + .blog-filter__checkbox-label {
+  color: #1919EF;
+  border-color: #1919EF;
+  background-color: transparent;
+  outline: unset;
+}
+.blog-filter__checkbox-input:focus-visible + .blog-filter__checkbox-label {
+  color: #F2F2F2;
+  border-color: #737373;
+  background-color: #737373;
+}
+.blog-filter__checkbox--active .blog-filter__checkbox-label {
+  color: #1919EF;
+  border-color: #1919EF;
+  background-color: transparent;
 }
 
 .blog-list {
@@ -1530,6 +1574,11 @@ textarea {
     background-color: #1919EF;
     color: #ffffff;
     margin-top: 58px;
+  }
+}
+@media (min-width: 1304px) {
+  .blog-list__more {
+    margin: 41px auto 0;
   }
 }
 .blog-list__more:focus-visible, .blog-list__more:hover {
